@@ -1,0 +1,34 @@
+.hg/
+*.pyc
+
+# For buildout
+.installed.cfg
+bin/
+buildout.cfg
+develop-eggs/
+downloads/
+eggs/
+etc/
+parts/
+py27/
+.idea/
+# For v8, we locate data_dir in the project directory
+odoo_data_dir/
+odoo8_data_dir/
+inouk.edofx
+inouk.recipe.odoo.setup_db
+inouk.recipe.odoo_cmd
+ofx_files
+var/
+
+# For Audaxis addons structure
+/**/funkload/log/
+
+
+
+# project specific
+enterprise-9/
+inouk_dev/
+pdf_sandbox/
+pdf_sandbox
+inouk_openerp_data_migration_toolkit

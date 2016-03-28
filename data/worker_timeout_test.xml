@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data noupdate="1">
+        <record id="worker_timeout_test__default" model="worker_timeout_test">
+            <field name="name">Default Test</field>
+            <field name="worker_http_process_duration" eval="60"/>
+            <field name="worker_cron_process_duration" eval="180"/>
+        </record>
+    </data>
+</openerp>

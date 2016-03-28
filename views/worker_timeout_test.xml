@@ -1,0 +1,59 @@
+<openerp>
+    <data>
+        <record id="worker_timeout_test_form_view" model="ir.ui.view">
+        	<field name="name">worker_timeout_test.form</field>
+        	<field name="model">worker_timeout_test</field>
+        	<field name="priority" eval="16" />
+        	<field name="arch" type="xml">
+        		<form string="Worker Timeout Test">
+        			<header>
+        				<button name="launch_long_reponse_processing"
+                                string="Long response processing"
+                                type="object" class="oe_highlight" />
+        			</header>
+
+        			<sheet>
+                        <div>
+                            <h1>
+                                <field name="name" default_focus="1"/>
+                            </h1>
+                        </div>
+
+        				<group>
+                            <group string="WorkerHTTP">
+                                <field name="limit_time_real" />
+                                <field name="worker_http_process_duration" />
+
+                            </group>
+                            <group string="WorkerCron">
+                                <field name="limit_time_real_cron" />
+                                <field name="worker_cron_process_duration" />
+
+                            </group>
+        				</group>
+        				<group string="Results">
+                            <field name="result" />
+                            <field name="worker_result" />
+        				</group>
+
+        			</sheet>
+        		</form>
+
+        	</field>
+        </record>
+
+        <record id="worker_timeout_test_act_window" model="ir.actions.act_window">
+            <field name="name">Worker Timeout Test</field>
+            <field name="res_model">worker_timeout_test</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <menuitem id="worker_timeout_test_menu"
+                  name="W.T. Test"
+                  action="worker_timeout_test_act_window"/>
+
+    </data>
+</openerp>
+
+

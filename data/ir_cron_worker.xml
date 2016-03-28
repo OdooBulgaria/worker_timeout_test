@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data noupdate="1">
+        <record id="ir_cron__worker_timeout_test" model="ir.cron">
+            <field name="name">Worker Timeout Test</field>
+            <field name="function">worker_long_processing</field>
+            <field name="args">(1,)</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number" eval="1" />
+            <field name="interval_type">minutes</field>
+            <field eval="5" name="priority"/>
+            <field name="doall" eval="False"/>
+            <field eval="1" name="active"/>
+            <field name="numbercall" eval="-1"/>
+            <field name="model">worker_timeout_test</field>
+        </record>
+    </data>
+</openerp>
